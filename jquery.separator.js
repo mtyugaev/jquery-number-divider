@@ -5,7 +5,6 @@
  *
  * @author Mikhail Tyugaev
  * @version 1.0.0 (2016-11-09)
- * @link https://github.com/tyugaev/separator
 */
 (function($) {
 
