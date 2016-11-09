@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Example</title>
+    <!-- Plugins -->
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="jquery.separator.js"></script>
+</head>
+<body>
+    <input id="input" type="text" placeholder="Enter the number">
+    <select id="select">
+      <option value=" ">','(space)</option>
+      <option value=".">'.'(dot)</option>
+      <option selected="selected" value=",">','(comma)</option>
+    </select>
+    <label>Separate thousand(1000..9999)</label>
+    <input id="checkbox" title="Separate thousand(1000..9999)" type="checkbox" name="checkbox" checked="checked" />
+
+    <script type="text/javascript">
+        var input = $('#input');
+        var checkbox = $('#checkbox');
+        var select = $('#select');
+
+        input.separate();
+
+        $(select).add(checkbox).change(function () {
+            input.separate({
+                delimiter:select.val(),
+                separateThousand:checkbox.is(":checked")
+            });
+        });
+    </script>
+</body>
+</html>
