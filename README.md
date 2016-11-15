@@ -1,9 +1,9 @@
 ## Installation
 
-Download jquery.separator.js and just add the line
+Download jquery.number-separator.js and just add the line
 
 ```
-<script type="text/javascript" src="jquery.separator.js"></script>
+<script type="text/javascript" src="jquery.number-separator.js"></script>
 ```
 
 ## Code Example
