@@ -1,5 +1,3 @@
-jQuery number separator
-
 ## Installation
 
 Download jquery.separator.js and just add the line

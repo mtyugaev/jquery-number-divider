@@ -12,27 +12,37 @@
     <script type="text/javascript" src="jquery.separator.js"></script>
 </head>
 <body>
-    <input id="input" type="text" placeholder="Enter the number">
+	<h3>A demonstration of how to use number separator</h3>
+    <label>Separate thousand(1000..9999)</label>
+    <input id="checkbox" title="Separate thousand(1000..9999)" type="checkbox" name="checkbox" checked="checked" />
     <select id="select">
-      <option value=" ">','(space)</option>
+      <option value=" ">' '(space)</option>
       <option value=".">'.'(dot)</option>
       <option selected="selected" value=",">','(comma)</option>
     </select>
-    <label>Separate thousand(1000..9999)</label>
-    <input id="checkbox" title="Separate thousand(1000..9999)" type="checkbox" name="checkbox" checked="checked" />
+    <br><br>
+    <input id="input" type="text" placeholder="Enter the number">
+    <br><br>
+    <input id="range_label" disabled="disabled" type="text" value="3000">
+    <input id="range_input" max="2000000" min="3000" step="3000" type="range" style="width: 250px;">
 
     <script type="text/javascript">
         var input = $('#input');
         var checkbox = $('#checkbox');
         var select = $('#select');
+        var rangeLabel = $('#range_label');
 
-        input.separate();
+        $(input).add(rangeLabel).separate();
 
         $(select).add(checkbox).change(function () {
-            input.separate({
+            $(input).add(rangeLabel).separate({
                 delimiter:select.val(),
                 separateThousand:checkbox.is(":checked")
             });
+        });
+
+        $('#range_input').on("input change", function() {
+        	rangeLabel.val(this.value).change();
         });
     </script>
 </body>
