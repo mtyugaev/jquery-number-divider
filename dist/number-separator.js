@@ -4,7 +4,7 @@
  * Licensed under the MIT license
  *
  * @author Mikhail Tyugaev
- * @version 1.0.0 RC (2016-11-23)
+ * @version 1.0.0 (2016-11-23)
  */
 (function($) {
 

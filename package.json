@@ -1,0 +1,33 @@
+{
+  "name": "number-separator",
+  "version": "1.0.0",
+  "description": "jQuery number separator plugin",
+  "main": "dist/number-separator.js",
+  "scripts": {
+    "test": "example.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tyugaev/jquery-number-separator.git"
+  },
+  "keywords": [
+    "jquery-plugin",
+    "separator",
+    "delimiter",
+    "number"
+  ],
+  "author": "Mikhail Tyugaev <tugayev.m.v@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tyugaev/jquery-number-separator/issues"
+  },
+  "homepage": "https://tyugaev.github.io/number-separator",
+  "dependencies": {
+    "jquery": ">= 1.7.1"
+  },
+  "devDependencies": {
+    "gulp": "*",
+    "gulp-uglify": "*",
+    "gulp-rename": "*"
+  }
+}
