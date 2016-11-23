@@ -1,9 +1,9 @@
 ## Installation
 
-1. [Download](https://github.com/tyugaev/jquery-number-separator/blob/master/jquery.number-separator.js) jquery.number-separator.js and just add the line
+1. Download number-separator.js and just add the line
 
    ```
-   <script type="text/javascript" src="jquery.number-separator.js"></script>
+   <script type="text/javascript" src="number-separator.js"></script>
    ```
 2. Set up type of inputs to 'text', original value was saved in attr with name 'number'
 
@@ -33,6 +33,16 @@ Also you can separate numbers in simple HTML tags
 $('.separate').separate();
 ```
 In this case all inputs was bind on change event, but others tags was processed once 
+
+## Options
+Below is a complete list of options and matching default values:
+```
+{
+    delimiter: ',',                  // current delimiter
+    separateThousand: true,          // 1,000..9,999
+    delimiterRegExp: /[\.\,\s]/g     // available delimiters
+}
+```
 
 ## License
 Copyright &copy; Mikhail Tyugaev<br>
