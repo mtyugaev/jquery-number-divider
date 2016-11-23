@@ -15,16 +15,22 @@
 	<h3>A demonstration of how to use number separator</h3>
     <label>Separate thousand(1000..9999)</label>
     <input id="checkbox" title="Separate thousand(1000..9999)" type="checkbox" name="checkbox" checked="checked" />
-    <select id="select">
+    <select id="select" title="delimiters">
       <option value=" ">' '(space)</option>
       <option value=".">'.'(dot)</option>
       <option selected="selected" value=",">','(comma)</option>
     </select>
     <br><br>
-    <input id="input" type="text" placeholder="Enter the number">
+    <p><label>Type of inputs must be 'text', original number is in attr with name 'number'</label></p>
+    <input class="separate" id="input" type="text" placeholder="Enter the number" value="3000">
     <br><br>
-    <input id="range_label" disabled="disabled" type="text" value="3000">
-    <input id="range_input" max="2000000" min="3000" step="3000" type="range" style="width: 250px;">
+    <input class="separate" id="range_label" disabled="disabled" type="text" value="5000">
+    <input id="range_input" max="1000000" min="5000" step="5000" type="range" style="width: 250px;">
+    <br><br>
+    <h4>Also you can separate numbers in simple HTML tags</h4>
+    <div class="separate">1000</div>
+    <p><span class="separate">10000</span></p>
+    <p><label class="separate">1000000</label></p>
 
     <script type="text/javascript">
         var input = $('#input');
@@ -32,10 +38,10 @@
         var select = $('#select');
         var rangeLabel = $('#range_label');
 
-        $(input).add(rangeLabel).separate();
+        $('.separate').separate();
 
         $(select).add(checkbox).change(function () {
-            $(input).add(rangeLabel).separate({
+            $('.separate').separate({
                 delimiter:select.val(),
                 separateThousand:checkbox.is(":checked")
             });
