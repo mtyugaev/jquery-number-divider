@@ -5,7 +5,7 @@ var rename = require('gulp-rename');
 gulp.task('default', ['uglify']);
 
 gulp.task('uglify', function(){
-    gulp.src('dist/number-separator.js')
+    gulp.src('dist/number-divider.js')
         .pipe(uglify())
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('dist/'));

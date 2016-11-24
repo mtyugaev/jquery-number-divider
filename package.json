@@ -1,27 +1,28 @@
 {
-  "name": "number-separator",
+  "name": "number-divider",
   "version": "1.0.0",
-  "description": "jQuery number separator plugin",
-  "main": "dist/number-separator.js",
+  "description": "jQuery number divider plugin",
+  "main": "dist/number-divider.js",
   "scripts": {
     "test": "example.html"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/tyugaev/jquery-number-separator.git"
+    "url": "https://github.com/tyugaev/jquery-number-divider.git"
   },
   "keywords": [
     "jquery-plugin",
     "separator",
     "delimiter",
+    "divider",
     "number"
   ],
   "author": "Mikhail Tyugaev <tugayev.m.v@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tyugaev/jquery-number-separator/issues"
+    "url": "https://github.com/tyugaev/jquery-number-divider/issues"
   },
-  "homepage": "https://tyugaev.github.io/number-separator",
+  "homepage": "https://tyugaev.github.io/number-divider",
   "dependencies": {
     "jquery": ">= 1.7.1"
   },

@@ -1,49 +1,63 @@
 ## Installation
 
-1. Download number-separator.js and just add the line
-
+1. Download number-divider.min.js and just add the line
    ```
-   <script type="text/javascript" src="number-separator.js"></script>
+   <script type="text/javascript" src="number-divider.min.js"></script>
    ```
-2. Set up type of inputs to 'text', original value was saved in attr with name 'number'
+2. Set up type of inputs to 'text'
 
-## Code Example
+Original number you can get simple using jQuery val(). Example: $('#myinput').val();
 
-With default parameters:
+## Code example
+
+You can use it with default parameters:
 ```javascript
-$('#input').separate();
+$('#input').divide();
 ```
 
 Or you can specify parameters:
 ```javascript
-$('#input').separate({
+$('#input').divide({
     delimiter:' ',
-    separateThousand:false
+    divideThousand:false
 });
 ```
 
-Also you can separate numbers in simple HTML tags
+Also you can divide numbers in simple HTML tags
 ```html
-<p><div class="separate">1000</div></p>
-<p><span class="separate">10000</span></p>
-<p><label class="separate">1000000</label></p>
-<input class="separate" type="text">
+<div class="divide">1000</div>
+<span class="divide">10000</span>
+<label class="divide">1000000</label>
 ```
-```javascript
-$('.separate').separate();
+
+And even mix them which is not surprising
 ```
-In this case all inputs was bind on change event, but others tags was processed once 
+<div class="divide">1000</div>
+<input class="divide" type="text">
+```
+In this case if you execute $('.divide').divide(); then all inputs was bind on change event, but others tags was processed once.
+
+If you wish use it in form then formatted values will be auto replaced on original values
+```html
+<form method="get">
+    <label>Simple GET form</label>
+    <p><input class="divide" name="login" placeholder="Enter login" required type="text"></p>
+    <p><input class="divide" name="password" placeholder="Enter password" required type="text"></p>
+    <button type="submit">Confirm</button>
+</form>
+```
+You do not need to do anything additional, plugin will automatically do it for you!
 
 ## Options
 Below is a complete list of options and matching default values:
 ```
 {
-    delimiter: ',',                  // current delimiter
-    separateThousand: true,          // 1,000..9,999
-    delimiterRegExp: /[\.\,\s]/g     // available delimiters
+    delimiter: ',',                 // current delimiter
+    divideThousand: true,           // 1,000..9,999
+    delimiterRegExp: /[\.\,\s]/g    // available delimiters
 }
 ```
 
 ## License
 Copyright &copy; Mikhail Tyugaev<br>
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) file for details
