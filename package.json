@@ -22,7 +22,7 @@
   "bugs": {
     "url": "https://github.com/tyugaev/jquery-number-divider/issues"
   },
-  "homepage": "https://tyugaev.github.io/number-divider",
+  "homepage": "https://tyugaev.github.io/number-divider/",
   "dependencies": {
     "jquery": ">= 1.7.1"
   },

@@ -1,12 +1,15 @@
 ## Installation
 
-1. Download number-divider.min.js and just add the line
+1. Download number-divider.min.js and just add the line<br>
    ```
    <script type="text/javascript" src="number-divider.min.js"></script>
    ```
 2. Set up type of inputs to 'text'
 
-Original number you can get simple using jQuery val(). Example: $('#myinput').val();
+Original number you can get simple using jQuery val(). Example: 
+```javascript
+$('#myinput').val();
+```
 
 ## Code example
 
