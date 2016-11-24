@@ -1,10 +1,13 @@
 ## Installation
-
-1. Download number-divider.min.js and just add the line<br>
+1. Download the latest version from [GitHub](https://github.com/tyugaev/jquery-number-divider/releases/latest) or via Bower package manager:<br>
    ```
-   <script type="text/javascript" src="number-divider.min.js"></script>
+   bower install number-divider
    ```
-2. Set up type of inputs to 'text'
+2. Include the JS file from the dist folder in the end of body section:<br>
+   ```
+   <script type="text/javascript" src="dist/number-divider.min.js"></script>
+   ```
+3. Set up type of all your separating inputs to 'text'
 
 Original number you can get simple using jQuery val(). Example: 
 ```javascript
